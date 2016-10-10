@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Creature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>3</CardID>
+  <CardName>Ice Titan</CardName>
+  <RessourceCost>1</RessourceCost>
+  <Abilities />
+  <Health>2</Health>
+  <Countdown>2</Countdown>
+  <Damage>1</Damage>
+  <Move>1</Move>
+  <Attack xsi:type="MeleeAttackComponent" />
+</Creature>

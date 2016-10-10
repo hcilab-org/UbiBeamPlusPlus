@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>4</CardID>
+  <CardName>Wall</CardName>
+  <RessourceCost>2</RessourceCost>
+  <Abilities />
+  <Health>4</Health>
+</Structure>

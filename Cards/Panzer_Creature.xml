@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Creature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>12</CardID>
+  <CardName>Panzer</CardName>
+  <RessourceCost>4</RessourceCost>
+  <Abilities />
+  <Health>4</Health>
+  <Countdown>3</Countdown>
+  <Damage>5</Damage>
+  <Move>1</Move>
+  <Attack xsi:type="MeleeAttackComponent" />
+</Creature>

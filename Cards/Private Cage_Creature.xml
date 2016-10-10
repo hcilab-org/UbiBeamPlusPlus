@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Creature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>1</CardID>
+  <CardName>Private Cage</CardName>
+  <RessourceCost>3</RessourceCost>
+  <Abilities>
+    <AbstractAbilityComponent xsi:type="Haste">
+      <Description>Unit comes in play with Countdown set to 0.</Description>
+      <Trigger>PlayCard</Trigger>
+      <Value>1</Value>
+    </AbstractAbilityComponent>
+  </Abilities>
+  <Health>3</Health>
+  <Countdown>2</Countdown>
+  <Damage>3</Damage>
+  <Move>1</Move>
+  <Attack xsi:type="MeleeAttackComponent" />
+</Creature>

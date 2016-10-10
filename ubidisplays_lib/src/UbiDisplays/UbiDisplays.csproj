@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D33CCDD3-B3CF-4E34-B7A9-6303272B5974}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UbiDisplays</RootNamespace>
+    <AssemblyName>UbiDisplays</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\UbiBeamPlusPlus\libs\Kinect\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hand.cs" />
+    <Compile Include="Model\Authority.cs" />
+    <Compile Include="Model\DisplayAPI\CloseDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\CloseTargetDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\LockPC.cs" />
+    <Compile Include="Model\DisplayAPI\SwapTargetDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\SwapDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\MoveTargetDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\MoveDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\OpenDisplay.cs" />
+    <Compile Include="Model\DisplayAPI\PlaySound.cs" />
+    <Compile Include="Model\DisplayAPI\SurfaceInfo.cs" />
+    <Compile Include="Model\DisplayAPI\Cuboid.cs" />
+    <Compile Include="Model\Display.cs" />
+    <Compile Include="Model\DisplayAPI\IRequest.cs" />
+    <Compile Include="Model\DisplayAPI\LowestPointCube.cs" />
+    <Compile Include="Model\DisplayAPI\SurfaceList.cs" />
+    <Compile Include="Model\IResource.cs" />
+    <Compile Include="Model\ISpatialQuery.cs" />
+    <Compile Include="Model\Kinect.cs" />
+    <Compile Include="Model\Log.cs" />
+    <Compile Include="Model\Native\BinaryHeap.cs" />
+    <Compile Include="Model\Native\Cluster.cs" />
+    <Compile Include="Model\Native\Div.cs" />
+    <Compile Include="Model\Native\KalmanDouble.cs" />
+    <Compile Include="Model\Native\kdTree.cs" />
+    <Compile Include="Model\Native\KinectTouch.cs" />
+    <Compile Include="Model\Native\KnuthVariance.cs" />
+    <Compile Include="Model\Native\ListExtensions.cs" />
+    <Compile Include="Model\Native\NativeDisplay.cs" />
+    <Compile Include="Model\Native\Point.cs" />
+    <Compile Include="Model\Native\Rank.cs" />
+    <Compile Include="Model\Native\Style.cs" />
+    <Compile Include="Model\Native\TouchPoint.cs" />
+    <Compile Include="Model\Native\TouchTracker.cs" />
+    <Compile Include="Model\Native\window.cs" />
+    <Compile Include="Model\Surface.cs" />
+    <Compile Include="MouseHand.cs" />
+    <Compile Include="FingerPoint.cs" />
+    <Compile Include="TouchHand.cs" />
+    <Compile Include="UbiHand.cs" />
+    <Compile Include="Utilities\BufferedStat.cs" />
+    <Compile Include="Utilities\ColourUtils.cs" />
+    <Compile Include="Utilities\DoubleBuffer.cs" />
+    <Compile Include="Utilities\FPSCounter.cs" />
+    <Compile Include="Utilities\GrahamScan.cs" />
+    <Compile Include="Utilities\MonitorDetection.cs" />
+    <Compile Include="Utilities\Pair.cs" />
+    <Compile Include="Utilities\Polygon.cs" />
+    <Compile Include="Utilities\RatcliffPlane.cs" />
+    <Compile Include="Utilities\RotatingCalipers.cs" />
+    <Compile Include="Utilities\RunningStat.cs" />
+    <Compile Include="Utilities\SlimMath\BoundingBox.cs" />
+    <Compile Include="Utilities\SlimMath\BoundingFrustum.cs" />
+    <Compile Include="Utilities\SlimMath\BoundingSphere.cs" />
+    <Compile Include="Utilities\SlimMath\Collision.cs" />
+    <Compile Include="Utilities\SlimMath\Enums.cs" />
+    <Compile Include="Utilities\SlimMath\Gjk.cs" />
+    <Compile Include="Utilities\SlimMath\MathHelper.cs" />
+    <Compile Include="Utilities\SlimMath\Matrix.cs" />
+    <Compile Include="Utilities\SlimMath\Plane.cs" />
+    <Compile Include="Utilities\SlimMath\Quaternion.cs" />
+    <Compile Include="Utilities\SlimMath\Ray.cs" />
+    <Compile Include="Utilities\SlimMath\Utilities.cs" />
+    <Compile Include="Utilities\SlimMath\Vector2.cs" />
+    <Compile Include="Utilities\SlimMath\Vector3.cs" />
+    <Compile Include="Utilities\SlimMath\Vector4.cs" />
+    <Compile Include="Utilities\Warper.cs" />
+    <Compile Include="Vectors\Vector2.cs" />
+    <Compile Include="Vectors\Vector3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

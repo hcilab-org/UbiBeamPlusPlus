@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <calibration>
+    <monitor>\\.\DISPLAY2</monitor>
+    <kinect>USB\VID_045E&amp;PID_02C2\6&amp;1D31F749&amp;0&amp;4</kinect>
+    <kinectimage>
+      <point>90,6666641235352 126,89778137207</point>
+      <point>260,444458007813 136,675552368164</point>
+      <point>96 32,6755561828613</point>
+      <point>265,777770996094 39,7866668701172</point>
+    </kinectimage>
+    <projectedimage>
+      <point>0,100000001490116 0,100000001490116</point>
+      <point>0,899999976158142 0,100000001490116</point>
+      <point>0,100000001490116 0,899999976158142</point>
+      <point>0,899999976158142 0,899999976158142</point>
+    </projectedimage>
+  </calibration>
+  <surface>
+    <name>Surface 0</name>
+    <inject_multitouch>false</inject_multitouch>
+    <projector>
+      <point>0,998374342918396 1,00231456756592</point>
+      <point>0,00631348323076963 0,991337239742279</point>
+      <point>-0,000434591813245788 -0,00122021010611206</point>
+      <point>1,00022637844086 0,00781111093237996</point>
+    </projector>
+    <sensorspace>
+      <point>0,5027997 0,3613873 1,122</point>
+      <point>-0,3260342 0,3888841 1,122</point>
+      <point>-0,3561848 -0,06654001 1,118</point>
+      <point>0,4736083 -0,1135094 1,118</point>
+    </sensorspace>
+    <image>
+      <point>288 28,2666664123535</point>
+      <point>77,3333358764648 21,1555557250977</point>
+      <point>69,3333358764648 137,600006103516</point>
+      <point>281,777770996094 149,155548095703</point>
+    </image>
+  </surface>
+  <display>
+    <resolution>800 600</resolution>
+    <loadinstruction>C:\Users\marc\Desktop\test\W Like Button.html</loadinstruction>
+    <surfacename>Surface 0</surfacename>
+  </display>
+</data>

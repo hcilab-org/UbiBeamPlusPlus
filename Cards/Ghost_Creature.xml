@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Creature xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>11</CardID>
+  <CardName>Ghost</CardName>
+  <RessourceCost>2</RessourceCost>
+  <Abilities />
+  <Health>3</Health>
+  <Countdown>2</Countdown>
+  <Damage>2</Damage>
+  <Move>1</Move>
+  <Attack xsi:type="MeleeAttackComponent" />
+</Creature>

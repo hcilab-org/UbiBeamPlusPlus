@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>5</CardID>
+  <CardName>Lightning</CardName>
+  <RessourceCost>3</RessourceCost>
+  <Abilities>
+    <AbstractAbilityComponent xsi:type="DamageToOne">
+      <Description>Deal 3 damage to target Unit</Description>
+      <Trigger>PlayCard</Trigger>
+      <Value>3</Value>
+    </AbstractAbilityComponent>
+  </Abilities>
+</Spell>

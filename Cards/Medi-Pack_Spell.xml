@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CardID>7</CardID>
+  <CardName>Medi-Pack</CardName>
+  <RessourceCost>2</RessourceCost>
+  <Abilities>
+    <AbstractAbilityComponent xsi:type="Healing">
+      <Description>Heal target unit by 2 Health</Description>
+      <Trigger>PlayCard</Trigger>
+      <Value>2</Value>
+    </AbstractAbilityComponent>
+  </Abilities>
+</Spell>

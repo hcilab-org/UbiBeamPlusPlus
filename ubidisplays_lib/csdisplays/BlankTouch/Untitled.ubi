@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <calibration>
+    <monitor>\\.\DISPLAY3</monitor>
+    <kinect>USB\VID_045E&amp;PID_02C2\5&amp;DC4A972&amp;0&amp;4</kinect>
+    <kinectimage>
+      <point>19.9970695970695 222.945054945055</point>
+      <point>318.241758241758 225.723076923077</point>
+      <point>27.2527472527473 47.2615384615385</point>
+      <point>297.142857142857 55.1736263736263</point>
+    </kinectimage>
+    <projectedimage>
+      <point>0.1 0.1</point>
+      <point>0.9 0.1</point>
+      <point>0.1 0.9</point>
+      <point>0.9 0.9</point>
+    </projectedimage>
+  </calibration>
+  <surface>
+    <name>Surface 0</name>
+    <inject_multitouch>false</inject_multitouch>
+    <projector>
+      <point>0.725844419812 0.788527961479449</point>
+      <point>0.258019113378696 0.80212384091448</point>
+      <point>0.238758932647622 0.326043848603505</point>
+      <point>0.729123931874974 0.33435323216882</point>
+    </projector>
+    <sensorspace>
+      <point>0.2101335 0.1167409 0.7410001</point>
+      <point>-0.192499 0.1267082 0.696</point>
+      <point>-0.1909761 -0.1097564 0.627</point>
+      <point>0.2140932 -0.1199863 0.6720001</point>
+    </sensorspace>
+    <image>
+      <point>241.758241758242 75.4285714285714</point>
+      <point>81.7582417582418 68.3956043956044</point>
+      <point>73.8461538461539 170.373626373626</point>
+      <point>251.428571428571 171.252747252747</point>
+    </image>
+  </surface>
+  <display>
+    <resolution>800 600</resolution>
+    <loadinstruction>C:\Program Files (x86)\Ubi Displays\Ubi Displays\displays\W Blank Touch.html</loadinstruction>
+    <surfacename>Surface 0</surfacename>
+  </display>
+</data>

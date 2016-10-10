@@ -1,0 +1,93 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:interactivity="schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="CardEditor.MainWindow"
+        Title="Card Editor" Height="523" Width="567" ResizeMode="NoResize" Icon="Res/Icon_1.ico">
+    <Grid Margin="10,10,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Name"/>
+        <TextBox Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="4" Width="140" Text="{Binding Path=CardName, UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged"/>
+
+        <Label Grid.Row="1"  Grid.Column="0" Content="CardID" Margin="0,5,0,0"/>
+        <TextBox Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5,0,0" Text="{Binding Path=CardID}"/>
+        
+        <Label Grid.Row="2" Grid.Column="0"  Width="80" Content="Cost" Margin="0,5,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Width="30" IsEnabled="False" Text="{Binding Path=Cost, Mode=OneWay}" Margin="0,5,0,0"/>
+        <Button Grid.Row="2" Grid.Column="3" Width="20" HorizontalAlignment="Left" Click="Value_Handler" x:Name="CostPlus" Margin="0,5,0,0" Content="+"/>
+        <Button Grid.Row="2" Grid.Column="1" Width="20" HorizontalAlignment="Right" Click="Value_Handler" x:Name="CostMinus" Margin="0,5,0,0" Content="-"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Type" Margin="0,10,0,5"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4"  HorizontalAlignment="Left" Margin="0,10,0,5" SelectionChanged="ComboBox_SelectionChanged" x:Name="cmbCardType">
+            <ComboBoxItem Content="Creature" IsSelected="True"/>
+            <ComboBoxItem Content="Structure"/>
+            <ComboBoxItem Content="Spell"/>
+            <ComboBoxItem Content="Enchantment"/>
+        </ComboBox>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Damage"/>
+        <TextBox Grid.Row="4" Grid.Column="2" IsEnabled="False" Width="30"  x:Name="DamageBox" Text="{Binding Path=Damage}"/>
+        <Button Grid.Row="4" Grid.Column="3" Width="20" HorizontalAlignment="Left" Click="Value_Handler" x:Name="DamagePlus" Content="+"/>
+        <Button Grid.Row="4" Grid.Column="1" Width="20" HorizontalAlignment="Right" Click="Value_Handler" x:Name="DamageMinus" Content="-"/>
+
+        <Label Grid.Row="5" Grid.Column="0" Content="Countdown"/>
+        <TextBox Grid.Row="5" Grid.Column="2" IsEnabled="False" Width="30" Text="{Binding Path=Countdown}"/>
+        <Button Grid.Row="5" Grid.Column="3" Width="20" HorizontalAlignment="Left" Click="Value_Handler" x:Name="CountdownPlus" Content="+"/>
+        <Button Grid.Row="5" Grid.Column="1" Width="20" HorizontalAlignment="Right" Click="Value_Handler" x:Name="CountdownMinus" Content="-"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Content="Health"/>
+        <TextBox Grid.Row="6" Grid.Column="2" IsEnabled="False" Width="30" Text="{Binding Path=Health}"/>
+        <Button Grid.Row="6" Grid.Column="3" Width="20" HorizontalAlignment="Left"  Click="Value_Handler" x:Name="HealthPlus" Content="+"/>
+        <Button Grid.Row="6" Grid.Column="1" Width="20" HorizontalAlignment="Right" Click="Value_Handler" x:Name="HealthMinus" Content="-"/>
+
+        <Label Grid.Row="7" Grid.Column="0" Content="Picture" Margin="0,10,0,0"/>
+        <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Click="ChoosePicButton_Click" Content="Choose" Margin="0,10,0,0" />
+        
+        <CheckBox Grid.Row="8" Grid.Column="0" Margin="0,10,0,0" Content="1st Ability" IsChecked="False" Name="FirstAbility" Click="UpdateImage"/>
+        <ComboBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,10,0,0" IsEnabled="{Binding ElementName=FirstAbility, Path=IsChecked}" x:Name="cmbAbility1" DisplayMemberPath="Name" SelectionChanged="UpdateImage" />
+
+        <Label Grid.Row="9" Grid.Column="0" Content=""/>
+        <TextBox Grid.Row="9" Grid.Column="2" IsEnabled="False" Width="30" Text="{Binding Path=FirstAbilityValue}"/>
+        <Button Grid.Row="9" Grid.Column="3" Width="20" HorizontalAlignment="Left"  Click="Value_Handler" x:Name="FirstAbilityPlus" IsEnabled="{Binding ElementName=FirstAbility, Path=IsChecked}" Content="+"/>
+        <Button Grid.Row="9" Grid.Column="1" Width="20" HorizontalAlignment="Right" Click="Value_Handler" x:Name="FirstAbilityMinus" IsEnabled="{Binding ElementName=FirstAbility, Path=IsChecked}" Content="-"/>
+
+        <CheckBox Grid.Row="10" Grid.Column="0" Content="2nd Ability" Margin="0,5,0,0" IsChecked="False" Name="SecondAbility" Click="UpdateImage"/>
+        <ComboBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5,0,0" x:Name="cmbAbility2" IsEnabled="{Binding ElementName=SecondAbility, Path=IsChecked}" DisplayMemberPath="Name" SelectionChanged="UpdateImage"/>
+
+        <Label Grid.Row="11" Grid.Column="0" Content=""/>
+        <TextBox Grid.Row="11" Grid.Column="2" IsEnabled="False" Width="30" Text="{Binding Path=SecondAbilityValue}"/>
+        <Button Grid.Row="11" Grid.Column="3" Width="20" HorizontalAlignment="Left"  Click="Value_Handler" x:Name="SecondAbilityPlus" IsEnabled="{Binding ElementName=SecondAbility, Path=IsChecked}" Content="+"/>
+        <Button Grid.Row="11" Grid.Column="1" Width="20" HorizontalAlignment="Right" Click="Value_Handler" x:Name="SecondAbilityMinus" IsEnabled="{Binding ElementName=SecondAbility, Path=IsChecked}" Content="-"/>
+    
+        
+        <Button Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="3" Height="30" Content="Save Card" VerticalAlignment="Bottom" Click="SaveButton_Click"/>
+
+        <Canvas Grid.Row="0" Grid.Column="5" Grid.RowSpan="13" x:Name="_Canvas" Margin="10,0,0,0" Width="300"  Height="466"/>
+
+
+    </Grid>
+</Window>
